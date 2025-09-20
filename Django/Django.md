@@ -210,3 +210,92 @@ index()로 작성하면 그냥 탐색 도중 함수가 호출되어 버린다
 ## templates
 
 - 파일명은 templates로 약속
+
+## Django Template system
+
+- 페이지 틀에 여러 데이터를 동적으로 결합시켜 수많은 페이지를 효율적으로 만들어 낸다
+- HTML의 콘텐츠를 변수 값에 따라 변경
+
+## Django Template Language - DTL
+
+- Template에서 조건 반복 변수등 프로그래밍 기능을 제공
+
+### 변수
+
+reder 함수 세번째 인자로 딕셔너리 타입으로 전달
+
+키에 해당하는 문자열을 템플릿에서 사용
+
+키.키 통해 내부 변수에도 접근 가능
+
+### 필터
+
+- 변수 + | + 필터
+
+표시할 변수 수정시 사용
+
+### 태그
+
+반복 또는 논리 제어 흐름 만듦
+
+일부 태그는 시작과 종료 태그가 필요
+
+### 주석
+
+{% comment %}
+
+{% endcomment %}
+
+## 템플릿 상속
+
+- 페이지의 공통요소를 포함한 부모가 필요
+- 자식 템플릿이 재정의 할 수 있는 공간을 정의
+
+## HTML form
+
+요청 + 데이터(로그인, 검색)
+
+HTTP 에 요청을 보내는 포장지 → 메서드
+
+종류는 9가지
+
+단 HTML은 2가지 GET, POST만 지원
+
+나머지 종류는 프론트엔드에서 재가공해서 보냄
+
+### action & method
+
+action → 어디로
+
+method → 어떻게
+
+- GET 조회
+- POST 생성, 삭제, 수정
+
+### input
+
+name 속성 → 사용자가 입력한 데이터의 key(이름)
+
+## Query String Parameter
+
+주소?key=value&key=value&
+
+Query String Parameter vs Variable Routing
+
+쿼리 스트링은 문자열로 타입이 고정(숫자 구분 불가능)된 반면 variable 은 타입을 지정해줄 수 있다
+
+쿼리 스트링은 필수적이지 않고 주소에 반영되지 않는다
+
+varialbe은 무조건 주소에 무조건 기입을 해줘야 한다
+
+Variable Routing 주고 싶은 정보인 동시에 해당 화면의 주소
+
+쿼리 스트링 주고 싶음 주고 아님 말고 접속은 원래 가능
+
+## URL dispatcher
+
+- url 패턴 확인 및 뷰 함수 매칭
+
+## Variable Routing
+
+- URL 일부에 변수를 포함 시키자
